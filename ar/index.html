@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فندق بلازا — إقامة فاخرة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Inter:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+    .pool-section { flex-direction: row-reverse; }
+    .hours-box { border-left: none; border-right: 3px solid var(--color-gold); }
+    .lb-prev { left: auto; right: 0; }
+    .lb-next { right: auto; left: 0; }
+    .vip-banner { flex-direction: row-reverse; }
+    .nav-links { flex-direction: row-reverse; }
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="logo">✦ فندق بلازا</div>
+    <ul class="nav-links">
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#rooms">الغرف</a></li>
+      <li><a href="#gallery">المعرض</a></li>
+      <li><a href="#offers">العروض</a></li>
+      <li><a href="#events">الفعاليات</a></li>
+      <li><a href="../index.html" class="lang-btn">🌐 English</a></li>
+      <li><a href="#booking" class="nav-btn">احجز الآن</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <section id="home" class="hero">
+    <div class="hero-overlay">
+      <div class="hero-badge">فخامة · راحة · أناقة</div>
+      <h1>مرحباً بكم في فندق بلازا</h1>
+      <p class="hero-sub">حيث تلتقي الفخامة بالراحة</p>
+      <div class="hero-btns">
+        <a href="#rooms" class="btn-primary">استكشف الغرف</a>
+        <a href="#booking" class="btn-outline">احجز إقامتك</a>
+      </div>
+      <div class="scroll-hint">↓ مرر للأسفل</div>
+    </div>
+  </section>
+  <section id="rooms" class="rooms-section">
+    <div class="section-label">الإقامة</div>
+    <h2>الغرف والأجنحة</h2>
+    <p class="section-header">اختر من بين مجموعة غرفنا وأجنحتنا الفاخرة.</p>
+    <div class="rooms-grid">
+      <div class="room-card">
+        <div class="room-img room-img-standard">
+          <span class="room-emoji">🛏</span>
+          <span class="badge gold">عادية</span>
+        </div>
+        <div class="room-body">
+          <h3>غرفة عادية</h3>
+          <p>غرفة أنيقة 32 م² مع سرير كينج فاخر وإطلالة رائعة على المدينة. مثالية للمسافرين المنفردين والأزواج.</p>
+          <div class="amenities">
+            <span class="amenity">🛏 سرير كينج</span>
+            <span class="amenity">📶 واي فاي</span>
+            <span class="amenity">🌆 إطلالة المدينة</span>
+          </div>
+          <div class="room-footer">
+            <span class="price">$199 / ليلة</span>
+            <button class="book-btn" data-room="Standard Room">احجز هذه الغرفة</button>
+          </div>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-img room-img-vip">
+          <span class="room-emoji">💎</span>
+          <span class="badge vip">كبار الشخصيات</span>
+        </div>
+        <div class="room-body">
+          <h3>جناح كبار الشخصيات</h3>
+          <p>جناح 80 م² مع غرفة معيشة منفصلة وجاكوزي وخدمة كونسيرج خاصة. مصمم للضيوف المميزين.</p>
+          <div class="amenities">
+            <span class="amenity">🛁 جاكوزي</span>
+            <span class="amenity">🛎 كونسيرج</span>
+            <span class="amenity">🛋 صالة</span>
+          </div>
+          <div class="room-footer">
+            <span class="price">$699 / ليلة</span>
+            <button class="book-btn" data-room="VIP Suite">احجز هذه الغرفة</button>
+          </div>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-img room-img-kids">
+          <span class="room-emoji">🎈</span>
+          <span class="badge gold">الأطفال والمرح</span>
+        </div>
+        <div class="room-body">
+          <h3>غرفة الأطفال والأنشطة</h3>
+          <p>غرفة 40 م² مليئة بالألعاب والأنشطة الترفيهية، مع منطقة رسم وألعاب تفاعلية للأطفال والعائلات.</p>
+          <div class="amenities">
+            <span class="amenity">🎲 ألعاب ترفيهية</span>
+            <span class="amenity">🎨 ركن الرسم</span>
+            <span class="amenity">📚 مكتبة أطفال</span>
+          </div>
+          <div class="room-footer">
+            <span class="price">$249 / ليلة</span>
+            <button class="book-btn" data-room="Kids Room">احجز هذه الغرفة</button>
+          </div>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-img room-img-presidential">
+          <span class="room-emoji">👑</span>
+          <span class="badge gold">رئاسي</span>
+        </div>
+        <div class="room-body">
+          <h3>الجناح الرئاسي</h3>
+          <p>تحفتنا الفريدة — 160 م² من الفخامة الخالصة مع غرفتي نوم وشرفة خاصة ومطبخ كامل وإطلالات بانورامية.</p>
+          <div class="amenities">
+            <span class="amenity">🏙 شرفة</span>
+            <span class="amenity">🍳 مطبخ</span>
+            <span class="amenity">👑 وصول VIP</span>
+          </div>
+          <div class="room-footer">
+            <span class="price">$1,499 / ليلة</span>
+            <button class="book-btn" data-room="Presidential Suite">احجز هذه الغرفة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" class="gallery-section">
+    <div class="section-label">مساحاتنا</div>
+    <h2>لمحة من داخل فندق بلازا</h2>
+    <p class="section-header">استكشف غرفنا وأجنحتنا ومرافقنا بالتفصيل.</p>
+    <div class="tab-bar">
+      <div class="tab active" data-filter="all">الكل</div>
+      <div class="tab" data-filter="standard">عادي</div>
+      <div class="tab" data-filter="deluxe">فاخر</div>
+      <div class="tab" data-filter="vip">جناح كبار</div>
+      <div class="tab" data-filter="presidential">رئاسي</div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-cell standard-bg" data-room="standard" data-index="0" data-caption="غرفة نوم">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?hotel,bedroom,luxury'); background-size: cover; background-position: center;">
+          <span>🛏</span>
+          <div class="cell-label">عادية · غرفة نوم</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>غرفة نوم</div>
+            <div class="room-badge">عادية</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell standard-bg" data-room="standard" data-index="1" data-caption="حمام">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?hotel,bathroom,modern'); background-size: cover; background-position: center;">
+          <span>🚿</span>
+          <div class="cell-label">عادية · حمام</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>حمام</div>
+            <div class="room-badge">عادية</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell standard-bg" data-room="standard" data-index="2" data-caption="إطلالة المدينة">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?city,view,window,night'); background-size: cover; background-position: center;">
+          <span>🌆</span>
+          <div class="cell-label">عادية · إطلالة المدينة</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>إطلالة المدينة</div>
+            <div class="room-badge">عادية</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell deluxe-bg" data-room="deluxe" data-index="3" data-caption="غرفة نوم">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?deluxe,hotel,bedroom'); background-size: cover; background-position: center;">
+          <span>🛏</span>
+          <div class="cell-label">فاخر · غرفة نوم</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>غرفة نوم</div>
+            <div class="room-badge">فاخر</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell deluxe-bg" data-room="deluxe" data-index="4" data-caption="شرفة خاصة">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?hotel,balcony,view'); background-size: cover; background-position: center;">
+          <span>🌅</span>
+          <div class="cell-label">فاخر · شرفة خاصة</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>شرفة خاصة</div>
+            <div class="room-badge">فاخر</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell deluxe-bg" data-room="deluxe" data-index="5" data-caption="حوض استحمام">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?bathtub,luxury,spa'); background-size: cover; background-position: center;">
+          <span>🛁</span>
+          <div class="cell-label">فاخر · حوض استحمام</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>حوض استحمام</div>
+            <div class="room-badge">فاخر</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell vip-bg" data-room="vip" data-index="6" data-caption="غرفة معيشة">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?luxury,suite,living,room'); background-size: cover; background-position: center;">
+          <span>🛋</span>
+          <div class="cell-label">كبار · غرفة معيشة</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>غرفة معيشة</div>
+            <div class="room-badge">كبار</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell vip-bg" data-room="vip" data-index="7" data-caption="غرفة نوم رئيسية">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?luxury,master,bedroom'); background-size: cover; background-position: center;">
+          <span>🛏</span>
+          <div class="cell-label">كبار · غرفة نوم رئيسية</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>غرفة نوم رئيسية</div>
+            <div class="room-badge">كبار</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell vip-bg" data-room="vip" data-index="8" data-caption="جاكوزي">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?jacuzzi,luxury,spa'); background-size: cover; background-position: center;">
+          <span>🛁</span>
+          <div class="cell-label">كبار · جاكوزي</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>جاكوزي</div>
+            <div class="room-badge">كبار</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell vip-bg" data-room="vip" data-index="9" data-caption="إطلالة بانورامية">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?panoramic,city,skyline'); background-size: cover; background-position: center;">
+          <span>🌇</span>
+          <div class="cell-label">كبار · إطلالة بانورامية</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>إطلالة بانورامية</div>
+            <div class="room-badge">كبار</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell presidential-bg" data-room="presidential" data-index="10" data-caption="مدخل فاخر">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?hotel,grand,entrance,lobby'); background-size: cover; background-position: center;">
+          <span>🚪</span>
+          <div class="cell-label">رئاسي · مدخل فاخر</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>مدخل فاخر</div>
+            <div class="room-badge">رئاسي</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell presidential-bg" data-room="presidential" data-index="11" data-caption="غرفة نوم رئيسية">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?presidential,suite,bedroom'); background-size: cover; background-position: center;">
+          <span>👑</span>
+          <div class="cell-label">رئاسي · غرفة نوم رئيسية</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>غرفة نوم رئيسية</div>
+            <div class="room-badge">رئاسي</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell presidential-bg" data-room="presidential" data-index="12" data-caption="شرفة خاصة">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?penthouse,terrace,city'); background-size: cover; background-position: center;">
+          <span>🏙</span>
+          <div class="cell-label">رئاسي · شرفة خاصة</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>شرفة خاصة</div>
+            <div class="room-badge">رئاسي</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell presidential-bg" data-room="presidential" data-index="13" data-caption="مطبخ كامل">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?luxury,kitchen,modern'); background-size: cover; background-position: center;">
+          <span>🍳</span>
+          <div class="cell-label">رئاسي · مطبخ كامل</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>مطبخ كامل</div>
+            <div class="room-badge">رئاسي</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- قسم المرافق -->
+  <section id="amenities" class="amenities-section">
+    <div class="section-label">مرافق الفندق</div>
+    <h2>كل ما تحتاجه</h2>
+    <div class="amenities-grid">
+      <div class="amenity-card"><div class="amenity-icon">🏋️</div><h3>مركز اللياقة البدنية</h3><p>صالة رياضية حديثة مفتوحة 24/7 لجميع الضيوف.</p></div>
+      <div class="amenity-card"><div class="amenity-icon">🛎️</div><h3>كونسيرج</h3><p>خدمة شخصية للحجوزات والجولات والمزيد.</p></div>
+      <div class="amenity-card"><div class="amenity-icon">🚗</div><h3>خدمة صف السيارات</h3><p>صف سيارات مجاني لجميع ضيوف الفندق.</p></div>
+      <div class="amenity-card"><div class="amenity-icon">💼</div><h3>مركز الأعمال</h3><p>مساحات عمل خاصة وطباعة وإنترنت عالي السرعة.</p></div>
+      <div class="amenity-card"><div class="amenity-icon">👶</div><h3>نادي الأطفال</h3><p>أنشطة وأماكن لعب بإشراف للأطفال.</p></div>
+      <div class="amenity-card"><div class="amenity-icon">🧖</div><h3>السبا والعافية</h3><p>علاجات استرخاء وعافية في الموقع.</p></div>
+    </div>
+  </section>
+  <!-- قسم العروض الخاصة -->
+  <section id="offers" class="offers-section">
+    <div class="section-label">عروض حصرية</div>
+    <h2>باقات خاصة</h2>
+    <div class="offers-grid">
+      <div class="offer-card">
+        <div class="offer-img-area" style="background: linear-gradient(135deg, #a259c6 0%, #1a1a2e 100%);">
+          💑<span class="offer-badge">رومانسي</span>
+        </div>
+        <div class="offer-body">
+          <h3>باقة شهر العسل</h3>
+          <p>جناح فاخر، بتلات ورد، وعشاء خاص لشخصين.</p>
+          <ul class="offer-includes">
+            <li>· ترقية للجناح</li>
+            <li>· شمبانيا عند الوصول</li>
+            <li>· مساج للأزواج</li>
+            <li>· عشاء رومانسي خاص</li>
+          </ul>
+          <div class="offer-price">$899/ليلة</div>
+          <button class="book-pkg-btn">احجز الباقة</button>
+        </div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-img-area" style="background: linear-gradient(135deg, #3a8dde 0%, #1a1a2e 100%);">
+          🌆<span class="offer-badge">عطلة نهاية الأسبوع</span>
+        </div>
+        <div class="offer-body">
+          <h3>عطلة نهاية الأسبوع</h3>
+          <p>إقامة ليلتين، إفطار، وتسجيل خروج متأخر.</p>
+          <ul class="offer-includes">
+            <li>· إفطار لشخصين</li>
+            <li>· تسجيل خروج متأخر</li>
+            <li>· مشروبات ترحيبية</li>
+            <li>· صف سيارات مجاني</li>
+          </ul>
+          <div class="offer-price">$499/ليلة</div>
+          <button class="book-pkg-btn">احجز الباقة</button>
+        </div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-img-area" style="background: linear-gradient(135deg, #c9a84c 0%, #1a1a2e 100%);">
+          💼<span class="offer-badge">رجال الأعمال</span>
+        </div>
+        <div class="offer-body">
+          <h3>باقة رجال الأعمال</h3>
+          <p>غرفة تنفيذية، إفطار يومي، وإمكانية استخدام قاعة الاجتماعات.</p>
+          <ul class="offer-includes">
+            <li>· غرفة تنفيذية</li>
+            <li>· إفطار يومي</li>
+            <li>· قاعة اجتماعات</li>
+            <li>· نقل من وإلى المطار</li>
+          </ul>
+          <div class="offer-price">$299/ليلة</div>
+          <button class="book-pkg-btn">احجز الباقة</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- قسم الفعاليات والأعراس -->
+  <section id="events" class="events-section">
+    <div class="events-inner">
+      <div class="events-img-panel">
+        💍
+        <div style="margin-top:18px;font-size:1.1rem;color:#fff;">قاعة الاحتفالات الكبرى</div>
+      </div>
+      <div class="events-content">
+        <div class="section-label">الفعاليات والأعراس</div>
+        <h2>اصنع لحظات لا تُنسى</h2>
+        <p>من حفلات الزفاف إلى المؤتمرات، قاعاتنا المتنوعة وفريقنا الخبير يضمنون نجاح كل مناسبة.</p>
+        <div class="event-pills">
+          <span class="event-pill">حفل زفاف</span>
+          <span class="event-pill">شركات</span>
+          <span class="event-pill">خاص</span>
+        </div>
+        <ul class="events-features">
+          <li>قاعة احتفالات تتسع حتى 500 ضيف</li>
+          <li>غرف اجتماعات لـ 10–200 شخص</li>
+          <li>غرف طعام خاصة حميمة</li>
+        </ul>
+        <form class="events-form" action="https://formspree.io/f/mqeylpoo" method="POST">
+          <div class="form-group">
+            <label for="event-name">الاسم الكامل</label>
+            <input type="text" name="event-name" id="event-name" required>
+          </div>
+          <div class="form-group">
+            <label for="event-email">البريد الإلكتروني</label>
+            <input type="email" name="event-email" id="event-email" required>
+          </div>
+          <div class="form-group">
+            <label for="event-type">نوع الفعالية</label>
+            <select name="event-type" id="event-type" required>
+              <option>حفل زفاف</option>
+              <option>شركات</option>
+              <option>فعالية خاصة</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="event-guests">عدد الضيوف المتوقع</label>
+            <input type="number" name="event-guests" id="event-guests" min="1" required>
+          </div>
+          <div class="form-group">
+            <label for="event-date">التاريخ المفضل</label>
+            <input type="date" name="event-date" id="event-date" required>
+          </div>
+          <div class="form-group">
+            <label for="event-message">رسالة</label>
+            <textarea name="event-message" id="event-message" rows="3"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">إرسال الاستفسار ←</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section id="pool" class="pool-section">
+    <div class="pool-img">
+      <div class="pool-label">🏊 مسبح السطح</div>
+    </div>
+    <div class="pool-content">
+      <div class="section-label">المسبح والسبا</div>
+      <h2>انغمس في السكينة</h2>
+      <p>استرخِ في مسبحنا اللانهائي على السطح وتجدد في المنتجع الصحي.</p>
+      <div class="features">
+        <div class="feature-item"><span>🧖‍♂️</span> علاجات السبا</div>
+        <div class="feature-item"><span>🌅</span> إطلالات المدينة</div>
+        <div class="feature-item"><span>🍹</span> بار المسبح</div>
+        <div class="feature-item"><span>🛏️</span> كابانا خاصة</div>
+        <div class="feature-item"><span>💦</span> مسبح مدفأ</div>
+        <div class="feature-item"><span>🕒</span> مفتوح 6ص–11م</div>
+      </div>
+      <div class="hours-box">ساعات العمل: 6 صباحاً – 11 مساءً يومياً</div>
+      <button class="cta-btn">احجز كابانا ←</button>
+    </div>
+  </section>
+  <section id="restaurant" class="restaurant-section">
+    <div class="section-label">المطعم</div>
+    <h2>تجربة الطعام الراقية</h2>
+    <p class="section-header">استمتع بوجبات فاخرة من إعداد طهاتنا.</p>
+    <div class="dining-grid">
+      <div class="dining-card breakfast-bg">
+        <div class="dining-img">🍳</div>
+        <div class="dining-body">
+          <span class="meal-tag">بوفيه الصباح</span>
+          <h3>بوفيه الصباح</h3>
+          <p>ابدأ يومك مع بوفيه الإفطار الدولي الفاخر الذي يضم المعجنات الطازجة والبيض المطبوخ حسب الطلب والفواكه الاستوائية والقهوة الحرفية.</p>
+          <div class="hours">⏰ 7:00 ص – 11:00 ص</div>
+          <button class="reserve-btn">احجز طاولة</button>
+        </div>
+      </div>
+      <div class="dining-card lunch-bg">
+        <div class="dining-img">🥗</div>
+        <div class="dining-body">
+          <span class="meal-tag">غداء à la carte</span>
+          <h3>غداء à la carte</h3>
+          <p>استمتع بتشكيلة مختارة من أطباق البحر الأبيض المتوسط والمطبخ الآسيوي في مطعمنا المشمس مع إطلالات بانورامية على المدينة.</p>
+          <div class="hours">⏰ 12:00 م – 3:30 م</div>
+          <button class="reserve-btn">احجز طاولة</button>
+        </div>
+      </div>
+      <div class="dining-card dinner-bg">
+        <div class="dining-img">🍷</div>
+        <div class="dining-body">
+          <span class="meal-tag">عشاء راقٍ</span>
+          <h3>عشاء راقٍ</h3>
+          <p>أمسية لا تُنسى من العشاء الراقي مع قائمة تذوق موسمية وتوصيات النبيذ من السوميلييه وموسيقى البيانو الحية.</p>
+          <div class="hours">⏰ 6:30 م – 11:00 م</div>
+          <button class="reserve-btn">احجز طاولة</button>
+        </div>
+      </div>
+    </div>
+    <div class="vip-banner">
+      <div>
+        <h3>👑 طعام خاص لضيوف VIP</h3>
+        <p>غرف طعام خاصة حصرية لضيوف الجناح الكبير والجناح الرئاسي. قوائم طعام مخصصة وسوميلييه خاص وخدمة كونسيرج كاملة.</p>
+      </div>
+    </div>
+  </section>
+  <section id="booking" class="booking-section">
+    <div class="section-label">الحجوزات</div>
+    <h2>احجز إقامتك</h2>
+    <p class="section-header">احجز غرفتك واستمتع بضيافة فاخرة.</p>
+    <div class="booking-card">
+      <form action="https://formspree.io/f/mqeylpoo" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin">تاريخ الوصول</label>
+            <input type="date" name="checkin" id="checkin" required>
+          </div>
+          <div class="form-group">
+            <label for="checkout">تاريخ المغادرة</label>
+            <input type="date" name="checkout" id="checkout" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="room">نوع الغرفة</label>
+            <select name="room" id="room" required>
+              <option value="Standard Room">غرفة عادية</option>
+              <option value="Deluxe Room">غرفة فاخرة</option>
+              <option value="VIP Suite">جناح كبار الشخصيات</option>
+              <option value="Presidential Suite">الجناح الرئاسي</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="guests">عدد الضيوف</label>
+            <input type="number" name="guests" id="guests" min="1" max="8" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">الاسم الكامل</label>
+            <input type="text" name="name" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" name="email" id="email" required>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="message">طلبات خاصة</label>
+          <textarea name="message" id="message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">تحقق من التوفر ←</button>
+      </form>
+      <div class="trust-row">
+        <div class="trust-badge">✅ ضمان أفضل سعر</div>
+        <div class="trust-badge">🔒 حجز آمن</div>
+        <div class="trust-badge">🔄 إلغاء مجاني</div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">✦ فندق بلازا</div>
+        <p>استمتع بالفخامة والراحة والأناقة في قلب المدينة.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#rooms">الغرف</a></li>
+          <li><a href="#gallery">المعرض</a></li>
+          <li><a href="#amenities">المرافق</a></li>
+          <li><a href="#offers">العروض</a></li>
+          <li><a href="#events">الفعاليات</a></li>
+          <li><a href="#pool">المسبح</a></li>
+          <li><a href="#restaurant">المطعم</a></li>
+          <li><a href="#booking">الحجز</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>المرافق</h4>
+        <ul>
+          <li>مسبح</li>
+          <li>سبا</li>
+          <li>مطعم</li>
+          <li>صالة رياضية</li>
+          <li>كونسيرج</li>
+          <li>خدمة السيارات</li>
+        </ul>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+      <span> كركوك, العراق</span>
+      <span> +964 773 088 0044</span>
+      <span> plazahotelkirkuk@gmail.com</span>
+      </div>
+    </div>
+    <div class="social-row">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="footer-bottom">© 2026 صاعب سعد. جميع الحقوق محفوظة.</div>
+  </footer>
+  <a href="https://wa.me/12345678900?text=مرحباً%2C%20أود%20حجز%20غرفة%20في%20فندق%20بلازا."
+   class="whatsapp-btn"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="تواصل عبر واتساب"
+   title="تواصل عبر واتساب"
+   style="right: auto; left: 24px;">
+  <span class="whatsapp-pulse"></span>
+</a>
+<div id="lightbox" class="lightbox" style="display:none;">
+  <div class="lightbox-inner">
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" aria-label="Previous">&#x2039;</button>
+    <div class="lightbox-img"></div>
+    <button class="lb-nav lb-next" aria-label="Next">&#x203A;</button>
+    <div class="lightbox-caption">
+      <h4></h4>
+      <span class="lb-badge"></span>
+    </div>
+  </div>
+</div>
+<script src="../js/main.js"></script>
+
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/YOUR_WIDGET_ID';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+</script>
+</body>
+</html>

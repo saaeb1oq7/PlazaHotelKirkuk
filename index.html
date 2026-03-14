@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plaza Hotel — Luxury Stays</title>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Inter:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">✦ PLAZA HOTEL</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="ar/index.html" class="lang-btn">🌐 عربي</a></li>
+      <li><a href="#booking" class="nav-btn">Book Now</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay">
+      <div class="hero-badge">LUXURY · COMFORT · ELEGANCE</div>
+      <h1>Welcome to Plaza Hotel</h1>
+      <p class="hero-sub">Where Luxury Meets Comfort</p>
+      <div class="hero-btns">
+        <a href="#rooms" class="btn-primary">Explore Rooms</a>
+        <a href="#booking" class="btn-outline">Book Your Stay</a>
+      </div>
+      <div class="scroll-hint">↓ SCROLL TO DISCOVER</div>
+    </div>
+  </section>
+  <!-- Rooms & Suites Section -->
+  <section id="rooms" class="rooms-section">
+    <div class="section-label">Accommodations</div>
+    <h2>Rooms & Suites</h2>
+    <p class="section-header">Choose from our range of luxury rooms and suites.</p>
+    <div class="rooms-grid">
+      <div class="room-card">
+        <div class="room-img room-img-standard">
+          <span class="room-emoji">🛏</span>
+          <span class="badge gold">STANDARD</span>
+        </div>
+        <div class="room-body">
+          <h3>Standard Room</h3>
+          <p>A beautifully appointed 32 m² room with a plush king bed and stunning city views. Perfect for solo travelers and couples.</p>
+          <div class="amenities">
+            <span class="amenity">🛏 King Bed</span>
+            <span class="amenity">📶 Wi-Fi</span>
+            <span class="amenity">🌆 City View</span>
+          </div>
+          <div class="room-footer">
+            <span class="price">$199 / night</span>
+            <button class="book-btn" data-room="Standard Room">Book This Room</button>
+          </div>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-img room-img-kids">
+          <span class="room-emoji">🎈</span>
+          <span class="badge gold">KIDS & FUN</span>
+        </div>
+        <div class="room-body">
+          <h3>Kids & Fun Activities Room</h3>
+          <p>A 40 m² room filled with games, creative activities, and a drawing area for children and families to enjoy together.</p>
+          <div class="amenities">
+            <span class="amenity">🎲 Fun Games</span>
+            <span class="amenity">🎨 Drawing Corner</span>
+            <span class="amenity">📚 Kids Library</span>
+          </div>
+          <div class="room-footer">
+            <span class="price">$249 / night</span>
+            <button class="book-btn" data-room="Kids Room">Book This Room</button>
+          </div>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-img room-img-deluxe">
+          <span class="room-emoji">🛁</span>
+          <span class="badge gold">DELUXE</span>
+        </div>
+        <div class="room-body">
+          <h3>Deluxe Room</h3>
+          <p>Spacious 48 m² room with a private balcony, soaking bathtub, and premium mini-bar. Ideal for a romantic getaway.</p>
+          <div class="amenities">
+            <span class="amenity">🛏 King Bed</span>
+            <span class="amenity">🛁 Bathtub</span>
+            <span class="amenity">🍸 Mini-Bar</span>
+          </div>
+          <div class="room-footer">
+            <span class="price">$349 / night</span>
+            <button class="book-btn" data-room="Deluxe Room">Book This Room</button>
+          </div>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-img room-img-vip">
+          <span class="room-emoji">💎</span>
+          <span class="badge vip">VIP</span>
+        </div>
+        <div class="room-body">
+          <h3>VIP Suite</h3>
+          <p>An 80 m² suite with a separate living area, jacuzzi, and dedicated butler service. Designed for discerning guests.</p>
+          <div class="amenities">
+            <span class="amenity">🛁 Jacuzzi</span>
+            <span class="amenity">🛎 Butler</span>
+            <span class="amenity">🛋 Lounge</span>
+          </div>
+          <div class="room-footer">
+            <span class="price">$699 / night</span>
+            <button class="book-btn" data-room="VIP Suite">Book This Room</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery-section">
+    <div class="section-label">OUR SPACES</div>
+    <h2>A Glimpse Inside Plaza Hotel</h2>
+    <p class="section-header">Explore our rooms, suites, and amenities in detail.</p>
+    <div class="tab-bar">
+      <div class="tab active" data-filter="all">All</div>
+      <div class="tab" data-filter="standard">Standard</div>
+      <div class="tab" data-filter="deluxe">Deluxe</div>
+      <div class="tab" data-filter="vip">VIP Suite</div>
+      <div class="tab" data-filter="presidential">Presidential</div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-cell standard-bg" data-room="standard" data-index="0" data-caption="Bedroom">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?hotel,bedroom,luxury'); background-size: cover; background-position: center;">
+          <span>🛏</span>
+          <div class="cell-label">Standard · Bedroom</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Bedroom</div>
+            <div class="room-badge">STANDARD</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell standard-bg" data-room="standard" data-index="1" data-caption="Bathroom">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?hotel,bathroom,modern'); background-size: cover; background-position: center;">
+          <span>🚿</span>
+          <div class="cell-label">Standard · Bathroom</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Bathroom</div>
+            <div class="room-badge">STANDARD</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell standard-bg" data-room="standard" data-index="2" data-caption="City View">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?city,view,window,night'); background-size: cover; background-position: center;">
+          <span>🌆</span>
+          <div class="cell-label">Standard · City View</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>City View</div>
+            <div class="room-badge">STANDARD</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell deluxe-bg" data-room="deluxe" data-index="3" data-caption="Bedroom">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?deluxe,hotel,bedroom'); background-size: cover; background-position: center;">
+          <span>🛏</span>
+          <div class="cell-label">Deluxe · Bedroom</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Bedroom</div>
+            <div class="room-badge">DELUXE</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell deluxe-bg" data-room="deluxe" data-index="4" data-caption="Private Balcony">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?hotel,balcony,view'); background-size: cover; background-position: center;">
+          <span>🌅</span>
+          <div class="cell-label">Deluxe · Private Balcony</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Private Balcony</div>
+            <div class="room-badge">DELUXE</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell deluxe-bg" data-room="deluxe" data-index="5" data-caption="Soaking Tub">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?bathtub,luxury,spa'); background-size: cover; background-position: center;">
+          <span>🛁</span>
+          <div class="cell-label">Deluxe · Soaking Tub</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Soaking Tub</div>
+            <div class="room-badge">DELUXE</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell vip-bg" data-room="vip" data-index="6" data-caption="Living Room">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?luxury,suite,living,room'); background-size: cover; background-position: center;">
+          <span>🛋</span>
+          <div class="cell-label">VIP · Living Room</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Living Room</div>
+            <div class="room-badge">VIP SUITE</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell vip-bg" data-room="vip" data-index="7" data-caption="Master Bedroom">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?luxury,master,bedroom'); background-size: cover; background-position: center;">
+          <span>🛏</span>
+          <div class="cell-label">VIP · Master Bedroom</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Master Bedroom</div>
+            <div class="room-badge">VIP SUITE</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell vip-bg" data-room="vip" data-index="8" data-caption="Jacuzzi">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?jacuzzi,luxury,spa'); background-size: cover; background-position: center;">
+          <span>🛁</span>
+          <div class="cell-label">VIP · Jacuzzi</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Jacuzzi</div>
+            <div class="room-badge">VIP SUITE</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell vip-bg" data-room="vip" data-index="9" data-caption="Panoramic View">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?panoramic,city,skyline'); background-size: cover; background-position: center;">
+          <span>🌇</span>
+          <div class="cell-label">VIP · Panoramic View</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Panoramic View</div>
+            <div class="room-badge">VIP SUITE</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell presidential-bg" data-room="presidential" data-index="10" data-caption="Grand Entrance">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?hotel,grand,entrance,lobby'); background-size: cover; background-position: center;">
+          <span>🚪</span>
+          <div class="cell-label">Presidential · Grand Entrance</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Grand Entrance</div>
+            <div class="room-badge">PRESIDENTIAL</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell presidential-bg" data-room="presidential" data-index="11" data-caption="Master Bedroom">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?presidential,suite,bedroom'); background-size: cover; background-position: center;">
+          <span>👑</span>
+          <div class="cell-label">Presidential · Master Bedroom</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Master Bedroom</div>
+            <div class="room-badge">PRESIDENTIAL</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell presidential-bg" data-room="presidential" data-index="12" data-caption="Private Terrace">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?penthouse,terrace,city'); background-size: cover; background-position: center;">
+          <span>🏙</span>
+          <div class="cell-label">Presidential · Private Terrace</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Private Terrace</div>
+            <div class="room-badge">PRESIDENTIAL</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell presidential-bg" data-room="presidential" data-index="13" data-caption="Full Kitchen">
+        <div class="cell-inner" style="background-image: url('https://source.unsplash.com/600x400/?luxury,kitchen,modern'); background-size: cover; background-position: center;">
+          <span>🍳</span>
+          <div class="cell-label">Presidential · Full Kitchen</div>
+          <div class="cell-hover">
+            <span>🔍</span>
+            <div>Full Kitchen</div>
+            <div class="room-badge">PRESIDENTIAL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section -->
+  <section id="amenities" class="amenities-section">
+    <div class="section-label">HOTEL AMENITIES</div>
+    <h2>Everything You Need</h2>
+    <div class="amenities-grid">
+      <div class="amenity-card"><div class="amenity-icon">🏋️</div><h3>Fitness Center</h3><p>State-of-the-art gym open 24/7 for all guests.</p></div>
+      <div class="amenity-card"><div class="amenity-icon">🛎️</div><h3>Concierge</h3><p>Personalized service for reservations, tours, and more.</p></div>
+      <div class="amenity-card"><div class="amenity-icon">🚗</div><h3>Valet Parking</h3><p>Complimentary valet parking for all hotel guests.</p></div>
+      <div class="amenity-card"><div class="amenity-icon">💼</div><h3>Business Center</h3><p>Private workspaces, printing, and high-speed Wi-Fi.</p></div>
+      <div class="amenity-card"><div class="amenity-icon">👶</div><h3>Kids Club</h3><p>Supervised activities and play areas for children.</p></div>
+      <div class="amenity-card"><div class="amenity-icon">🧖</div><h3>Spa & Wellness</h3><p>Relaxing treatments and wellness therapies on site.</p></div>
+    </div>
+  </section>
+  <!-- Special Offers Section -->
+  <section id="offers" class="offers-section">
+    <div class="section-label">EXCLUSIVE OFFERS</div>
+    <h2>Special Packages</h2>
+    <div class="offers-grid">
+      <div class="offer-card">
+        <div class="offer-img-area" style="background: linear-gradient(135deg, #a259c6 0%, #1a1a2e 100%);">
+          💑<span class="offer-badge">ROMANCE</span>
+        </div>
+        <div class="offer-body">
+          <h3>Honeymoon Package</h3>
+          <p>Luxury suite, rose petals, and private dinner for two.</p>
+          <ul class="offer-includes">
+            <li>· Suite upgrade</li>
+            <li>· Champagne on arrival</li>
+            <li>· Couples massage</li>
+            <li>· Private candlelit dinner</li>
+          </ul>
+          <div class="offer-price">$899/night</div>
+          <button class="book-pkg-btn">Book Package</button>
+        </div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-img-area" style="background: linear-gradient(135deg, #3a8dde 0%, #1a1a2e 100%);">
+          🌆<span class="offer-badge">WEEKEND</span>
+        </div>
+        <div class="offer-body">
+          <h3>Weekend Escape</h3>
+          <p>2-night stay, breakfast, and late checkout included.</p>
+          <ul class="offer-includes">
+            <li>· Breakfast for two</li>
+            <li>· Late checkout</li>
+            <li>· Welcome drinks</li>
+            <li>· Free parking</li>
+          </ul>
+          <div class="offer-price">$499/night</div>
+          <button class="book-pkg-btn">Book Package</button>
+        </div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-img-area" style="background: linear-gradient(135deg, #c9a84c 0%, #1a1a2e 100%);">
+          💼<span class="offer-badge">BUSINESS</span>
+        </div>
+        <div class="offer-body">
+          <h3>Business Traveler</h3>
+          <p>Executive room, daily breakfast, and meeting room access.</p>
+          <ul class="offer-includes">
+            <li>· Executive room</li>
+            <li>· Daily breakfast</li>
+            <li>· Meeting room access</li>
+            <li>· Airport transfer</li>
+          </ul>
+          <div class="offer-price">$299/night</div>
+          <button class="book-pkg-btn">Book Package</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Events & Weddings Section -->
+  <section id="events" class="events-section">
+    <div class="events-inner">
+      <div class="events-img-panel">
+        💍
+        <div style="margin-top:18px;font-size:1.1rem;color:#fff;">GRAND BALLROOM</div>
+      </div>
+      <div class="events-content">
+        <div class="section-label">EVENTS & WEDDINGS</div>
+        <h2>Create Unforgettable Moments</h2>
+        <p>From dream weddings to corporate galas, our versatile venues and expert planners ensure every event is a success.</p>
+        <div class="event-pills">
+          <span class="event-pill">Wedding</span>
+          <span class="event-pill">Corporate</span>
+          <span class="event-pill">Private</span>
+        </div>
+        <ul class="events-features">
+          <li>Grand ballroom for up to 500 guests</li>
+          <li>Conference rooms for 10–200 attendees</li>
+          <li>Intimate private dining rooms</li>
+        </ul>
+        <form class="events-form" action="https://formspree.io/f/mqeylpoo" method="POST">
+          <div class="form-group">
+            <label for="event-name">Full Name</label>
+            <input type="text" name="event-name" id="event-name" required>
+          </div>
+          <div class="form-group">
+            <label for="event-email">Email</label>
+            <input type="email" name="event-email" id="event-email" required>
+          </div>
+          <div class="form-group">
+            <label for="event-type">Event Type</label>
+            <select name="event-type" id="event-type" required>
+              <option>Wedding</option>
+              <option>Corporate</option>
+              <option>Private Event</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="event-guests">Expected Guests</label>
+            <input type="number" name="event-guests" id="event-guests" min="1" required>
+          </div>
+          <div class="form-group">
+            <label for="event-date">Preferred Date</label>
+            <input type="date" name="event-date" id="event-date" required>
+          </div>
+          <div class="form-group">
+            <label for="event-message">Message</label>
+            <textarea name="event-message" id="event-message" rows="3"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">SEND INQUIRY →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Pool & Spa Section -->
+  <section id="pool" class="pool-section">
+    <div class="pool-img">
+      <div class="pool-label">🏊 ROOFTOP POOL</div>
+    </div>
+    <div class="pool-content">
+      <div class="section-label">POOL & SPA</div>
+      <h2>Dive Into Serenity</h2>
+      <p>Relax in our rooftop infinity pool and rejuvenate at the spa.</p>
+      <div class="features">
+        <div class="feature-item"><span>🧖‍♂️</span> Spa Treatments</div>
+        <div class="feature-item"><span>🌅</span> City Views</div>
+        <div class="feature-item"><span>🍹</span> Poolside Bar</div>
+        <div class="feature-item"><span>🛏️</span> Private Cabanas</div>
+        <div class="feature-item"><span>💦</span> Heated Pool</div>
+        <div class="feature-item"><span>🕒</span> Open 6am–11pm</div>
+      </div>
+      <div class="hours-box">Hours: 6am – 11pm daily</div>
+      <button class="cta-btn">Reserve a Cabana →</button>
+    </div>
+  </section>
+
+  <!-- Restaurant Section -->
+  <section id="restaurant" class="restaurant-section">
+    <div class="section-label">DINING</div>
+    <h2>The Grand Dining Experience</h2>
+    <p class="section-header">Enjoy gourmet meals crafted by our chefs.</p>
+    <div class="dining-grid">
+      <div class="dining-card breakfast-bg">
+        <div class="dining-img">🍳</div>
+        <div class="dining-body">
+          <span class="meal-tag">Breakfast</span>
+          <h3>Morning Buffet</h3>
+          <p>Start your day with our lavish international breakfast buffet featuring fresh pastries, eggs made to order, tropical fruits, and artisan coffees.</p>
+          <div class="hours">⏰ 7:00 AM – 11:00 AM</div>
+          <button class="reserve-btn">Reserve a Table</button>
+        </div>
+      </div>
+      <div class="dining-card lunch-bg">
+        <div class="dining-img">🥗</div>
+        <div class="dining-body">
+          <span class="meal-tag">Lunch</span>
+          <h3>À La Carte Lunch</h3>
+          <p>Enjoy a curated selection of Mediterranean and Asian-fusion dishes in our sun-drenched terrace restaurant with panoramic city views.</p>
+          <div class="hours">⏰ 12:00 PM – 3:30 PM</div>
+          <button class="reserve-btn">Reserve a Table</button>
+        </div>
+      </div>
+      <div class="dining-card dinner-bg">
+        <div class="dining-img">🍷</div>
+        <div class="dining-body">
+          <span class="meal-tag">Dinner</span>
+          <h3>Fine Dining Dinner</h3>
+          <p>An unforgettable evening of fine dining with a seasonal tasting menu, sommelier-curated wine pairings, and live piano music.</p>
+          <div class="hours">⏰ 6:30 PM – 11:00 PM</div>
+          <button class="reserve-btn">Reserve a Table</button>
+        </div>
+      </div>
+    </div>
+    <div class="vip-banner">
+      <div>
+        <h3 style="color:var(--color-gold);font-family:var(--font-heading);margin-bottom:6px;">👑 Private Dining for VIP Guests</h3>
+        <p style="color:#aaa;font-size:14px;">Exclusive private dining rooms available for VIP Suite and Presidential Suite guests. Personalized menus, private sommelier, and full butler service.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="booking-section">
+    <div class="section-label">RESERVATIONS</div>
+    <h2>Book Your Stay</h2>
+    <p class="section-header">Reserve your room and enjoy luxury hospitality.</p>
+    <div class="booking-card">
+      <form action="https://formspree.io/f/mqeylpoo" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin">Check-In Date</label>
+            <input type="date" name="checkin" id="checkin" required>
+          </div>
+          <div class="form-group">
+            <label for="checkout">Check-Out Date</label>
+            <input type="date" name="checkout" id="checkout" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="room">Room Type</label>
+            <select name="room" id="room" required>
+              <option value="Standard Room">Standard Room</option>
+              <option value="Deluxe Room">Deluxe Room</option>
+              <option value="VIP Suite">VIP Suite</option>
+              <option value="Presidential Suite">Presidential Suite</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <input type="number" name="guests" id="guests" min="1" max="8" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="message">Special Requests</label>
+          <textarea name="message" id="message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">CHECK AVAILABILITY →</button>
+      </form>
+      <div class="trust-row">
+        <div class="trust-badge">✅ Best Rate Guarantee</div>
+        <div class="trust-badge">🔒 Secure Booking</div>
+        <div class="trust-badge">🔄 Free Cancellation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">✦ PLAZA HOTEL</div>
+        <p>Experience luxury, comfort, and elegance in the heart of the city.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#pool">Pool</a></li>
+          <li><a href="#restaurant">Restaurant</a></li>
+          <li><a href="#booking">Booking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Amenities</h4>
+        <ul>
+          <li>Pool</li>
+          <li>Spa</li>
+          <li>Restaurant</li>
+          <li>Gym</li>
+          <li>Concierge</li>
+          <li>Valet</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>123 Plaza Ave, City</p>
+        <p>+1 234 567 8900</p>
+        <p>info@plazahotel.com</p>
+      </div>
+    </div>
+    <div class="social-row">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="footer-bottom">© 2026 Saaeb Saad. All rights reserved.</div>
+  </footer>
+  <a href="https://wa.me/12345678900?text=Hi%2C%20I%27d%20like%20to%20book%20a%20room%20at%20Plaza%20Hotel."
+   class="whatsapp-btn"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat on WhatsApp"
+   title="Chat on WhatsApp">
+  <span class="whatsapp-pulse"></span>
+</a>
+<div id="lightbox" class="lightbox" style="display:none;">
+  <div class="lightbox-inner">
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" aria-label="Previous">&#x2039;</button>
+    <div class="lightbox-img"></div>
+    <button class="lb-nav lb-next" aria-label="Next">&#x203A;</button>
+    <div class="lightbox-caption">
+      <h4></h4>
+      <span class="lb-badge"></span>
+    </div>
+  </div>
+</div>
+<!-- Leaflet JS and CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/69b4ce043c743b1c36fd85ec/1jjl49gut';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
